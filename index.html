@@ -56,15 +56,23 @@ layout: default
       <div class="container">
         <section id="main_content">
           <form action="https://formspree.io/f/xoqbvlda" method="POST" enctype="multipart/form-data">
-            <label>
-              Your email:
-              <input type="email" name="email">
-            </label>
-            <label>
-              Your file:
-              <input type="file" name="upload">
-            </label>
-            <button type="submit">Send</button>
+            <fieldset id="fs-frm-inputs">
+              <label>
+                Your email:
+                <input type="email" name="email">
+              </label>
+              <label>
+                Your file:
+                <input type="file" name="upload">
+              </label>
+              <label>
+                Message
+                <textarea 
+                  rows="5" name="message" id="message" placeholder="Type a message here." required="True">
+                </textarea>
+              </label>
+              <button type="submit">Send</button>
+            </fieldset>
           </form>
 
           <section id="downloads">
