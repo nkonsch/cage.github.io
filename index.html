@@ -18,7 +18,7 @@ layout: default
   <header>
     <div class="container">
       <a id="title" href="{{ '/' | relative_url }}"><h1>CAGE Challenge 3 </h1></a>
-      
+
       <h2> Cyber Autonomy Gym for Experimentation (CAGE) </h2>
 
       <!-- modify this form HTML and place wherever you want your form -->
@@ -58,39 +58,43 @@ layout: default
       
       <p>Your primary goals are to defend the drone team such that (a) compromised drones are detected and then isolated
       or reclaimed, and (b) the flow of data between the soldiers using the network is maintained.”</p>
-   
-    <h2>Challenge Details</h2>
+    
+      <!-- INSERT IMAGE 1 HERE -->
 
-      The scenario for Challenge 3 is a team of 25 autonomous drone hosts forming an ad-hoc network. Each drone is an
+
+      <h2>Challenge Details</h2>
+
+      <p>The scenario for Challenge 3 is a team of 25 autonomous drone hosts forming an ad-hoc network. Each drone is an
       embedded Linux system and communicates via radio-based networking with any other systems (drones or troops
-      underneath) that are physically close enough.</br>
-      </br>
-      The location of each drone is randomised at the beginning of each episode. The drones will then move according
+      underneath) that are physically close enough.</p>
+      
+      <p>The location of each drone is randomised at the beginning of each episode. The drones will then move according
       to a swarm algorithm to spread out across the area of interest. A drone may stop following the swarm algorithm
-      to maintain sufficient proximity with soldiers in order to enable communications.</br>
-      </br>
-      Blue agents will start the game in control of all drones in the swarm and be distributed one agent per drone.
+      to maintain sufficient proximity with soldiers in order to enable communications.</p>
+
+
+      <p>Blue agents will start the game in control of all drones in the swarm and be distributed one agent per drone.
       The exploitation of the drones by the hardware Trojans will occur randomly during the episode and may occur
       multiple times in a single episode. When the Trojan activates, it will remove the agent on the drone and replace
-      it with a Red agent.</br>
-      </br>
-      All drones in the swarm are of the same type and have the same vulnerabilities. The drones have a vulnerable
+      it with a Red agent.</p>
+  
+      <p>All drones in the swarm are of the same type and have the same vulnerabilities. The drones have a vulnerable
       service which is listening on port 8888 which an attacker can exploit to gain low privileged remote code
       execution. Drones have a wireless interface that establishes datalinks with all other drones that are within
-      communication distance.</br>
-      </br>
-      Actions are performed by an agent to change the state of the environment. A full breakdown of the actions is
+      communication distance.</p>
+
+      <p>Actions are performed by an agent to change the state of the environment. A full breakdown of the actions is
       provided in Appendix A. Actions are classified as either local or remote actions. Local actions are actions that
       can only act on the drone on which they are executed. Remote actions are actions that can act on any connected
       drone including the originating drone. Two drones are considered connected if there is a route between
-      them.</br>
-      </br>
-      Remote actions use the ad-hoc network established in the drone swarm and follow one of the shortest routes
+      them.</p>
+
+      <p>Remote actions use the ad-hoc network established in the drone swarm and follow one of the shortest routes
       between two drones. A shortest route is a path that passes through the least number of drones. A remote action
       may fail if any of the drones along the path drop the remote action's network traffic. A drone will still be
-      considered connected even if its traffic is being dropped.</br>
-      </br>
-      Attackers, which we also call Red agents, use actions that exploit vulnerabilities on the drones to expand their
+      considered connected even if its traffic is being dropped.</p>
+      
+      <p>Attackers, which we also call Red agents, use actions that exploit vulnerabilities on the drones to expand their
       control and compromise the transfer of data between patrols. Red team actions include ExploitDroneVulnerability,
       SeizeControl, FloodBandwidth, BlockTraffic, and AllowTraffic. If the ExploitDroneVulnerability is successful,
       the Red agent gains low privileged code execution on the target drone. This code execution can be followed up
@@ -99,16 +103,16 @@ layout: default
       the system, which may result in other agents' remote actions failing. The BlockTraffic and AllowTraffic actions
       give Red agents the ability to stop or allow traffic from a particular drone to enter and pass through the drone
       on which the action was executed. These actions will make a drone drop traffic from the targeted drone and may
-      cause remote actions from that drone to fail.</br>
-      </br>
-      Defenders, which we also call Blue agents, use actions to inhibit Red agents' actions and retake control of
+      cause remote actions from that drone to fail.</p>
+   
+      <p>Defenders, which we also call Blue agents, use actions to inhibit Red agents' actions and retake control of
       compromised systems. Blue agents may use the RetakeControl, RemoveOtherSessions, BlockTraffic, and AllowTraffic
       actions. RetakeControl allows a Blue agent to remotely take control of a drone, removing any Red agents and low
       privileged sessions from that drone and replacing them with a new Blue agent. RemoveOtherSessions removes from
       the drone any low privileged code execution that belongs to another agent. BlockTraffic and AllowTraffic are
-      identical to the Red actions.</br>
-      </br>
-      Both Red and Blue agents partially observe the environment based on the current state of the environment and the
+      identical to the Red actions.</p>
+      
+      <p>Both Red and Blue agents partially observe the environment based on the current state of the environment and the
       combination of actions chosen by all of the agents. An agent will have the most visibility of information
       relating to the drone on which it is hosted, termed its host drone. This information includes which IP addresses
       they have blocked, how much traffic they have flagged as malicious and which IP addresses sent that traffic. The
@@ -117,9 +121,9 @@ layout: default
       as the ExploitDroneVulnerability are more likely to be flagged than those that are benign, such as the SendData
       action. Each agent along the route taken by a remote action will independently assess the maliciousness of
       associated traffic. Agents may also observe the presence of processes on their drone that have been flagged as
-      malicious. See Appendix B for the full breakdown of the agent observation.</br>
-      </br>
-      The partial observations of individual agents will limit their ability to coordinate a response to an attack.
+      malicious. See Appendix B for the full breakdown of the agent observation.</p>
+   
+      <p>The partial observations of individual agents will limit their ability to coordinate a response to an attack.
       However, agents are able to communicate with other agents through an explicit broadcast, low-bandwidth
       communication channel. We use the standard broadcast paradigm for inter-agent communications, where each agent
       sends the same message to all other agents on connected drones, including agents on the other team. Due to
@@ -127,8 +131,10 @@ layout: default
       will allow researchers to create their own communication protocols. To help researchers unfamiliar with
       multi-agent communication, we provide several example communication protocols. Researchers may choose to use the
       examples, modify the examples, write their own custom protocols, or expose the communication actions to agents
-      to learn a protocol. </br></p>
-    </br>
+      to learn a protocol. </p>
+   
+        <!-- PRIV ESCALATION IMAGE HERE -->
+
       <p>Figure 2 shows the state transitions caused on a single drone by actions taken by agents on the Blue or Red
       team. Red agents that perform a successful exploit action against a drone will get low privileged code execution
       on that drone. If a Red agent performs a SeizeDrone action when it has low privileged code execution then it
@@ -137,21 +143,23 @@ layout: default
       Blue agent performs a RemoveOtherSessions action on a drone that is running low privileged code of a Red agent,
       then that code will be removed from the drone. All of these actions must meet preconditions to succeed, such as
       remote actions requiring a route to the target drone. Additionally, even if preconditions are met there is a
-      probability of random failure to represent other factors that may cause failure such as a hardware glitch.</br>
-      </br>
-      In CAGE Challenges 1 and 2, Red agents performed discovery actions to find IP addresses and open port numbers,
+      probability of random failure to represent other factors that may cause failure such as a hardware glitch.</p>
+      
+      <p>In CAGE Challenges 1 and 2, Red agents performed discovery actions to find IP addresses and open port numbers,
       however this is not necessary in CC3. The agents that Guilder has deployed already know about the vulnerability
       on port 8888 and quickly collect the IP addresses of the drones in the network from the ARP cache on the host
       drone. Therefore, both the Red and Blue agents start the game with full knowledge of the IP addresses and ports
-      that are present in the environment.</br>
-      </br>
-      To model data transfers between soldiers and determine the effectiveness of the agents, drones will attempt to
+      that are present in the environment.</p>
+      
+      <p>To model data transfers between soldiers and determine the effectiveness of the agents, drones will attempt to
       transfer data to each other. This data transfer represents data being sent from one patrol to another and is
       performed by Green agents. The data transfer is executed by the SendData action, which is a remote action that
       consumes bandwidth, may be blocked, and follows the shortest paths if it exists. A data transfer will be deemed
       to have failed if the data is dropped due to a lack of bandwidth or traffic being blocked, or a Red agent along
       the data path is able to intercept or alter the data. The reward for the Blue team is shared across all agents
       and is based on the Confidentiality, Integrity, and Availability of the transfer of data between drones.</p>
+
+        <!-- INSERT TABLE 1 HERE -->
 
       <p>Table 1 shows the potential rewards for different states of the environment. The reward received per time step
       by the Blue team is reduced by one for each failed data transfer attempt. Thus, the maximum reward the Blue team
@@ -177,7 +185,7 @@ layout: default
 
       We use the Cyber Operations Research Gym (CybORG) to simulate the cyber environment for CAGE Challenge 3.</p>
 
-      Please see [link to CybORG README] for further instructions on how to install and run the environment. </p>
+      Please see <mark>[link to CybORG README]</mark> for further instructions on how to install and run the environment. </p>
 
       <h2>How to submit responses</h2>
 
@@ -236,6 +244,8 @@ layout: default
               GitHub</a>
           </section>
       </div>
+
+      <!-- ADD REFERENCES AND CODE SNIPPETS HERE -->
   </header>
   </section>
   </div>
