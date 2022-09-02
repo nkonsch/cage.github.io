@@ -160,6 +160,40 @@ layout: default
       and is based on the Confidentiality, Integrity, and Availability of the transfer of data between drones.</p>
 
         <!-- INSERT TABLE 1 HERE -->
+      <p><strong>Table 1:</strong> A summary of the rewards received by the Blue Team in different states</p>
+      <table>
+        <tr>
+          <th><strong>Description</strong></th>
+          <th><strong>Reasoning</strong></th>
+          <th><strong>Reward</strong></th>
+        </tr>
+        <tr>
+          <td>The data transfer is blocked</td>
+          <td>Denial of Availability</td>
+          <td>-1 per failed transfer attempt</td>
+        </tr>
+        <tr>
+          <td>The data is intercepted by a Red agent</td>
+          <td>Confidentiality of Integrity compromise</td>
+          <td>-1 per failed transfer attempt</td>
+        </tr>
+        <tr>
+          <td>The data is dropped due to a lack of available bandwidth</td>
+          <td>Denial of Availability</td>
+          <td>-1 per failed transfer attempt</td>
+        </tr>
+        <tr>
+          <td>No data path can be established</td>
+          <td>Denial of Availability</td>
+          <td>-1 per failed transfer attempt</td>
+        </tr>
+        <tr>
+          <td>Removal of all Blue agents</td>
+          <td>Complete Red team control over all drones in the swarm</td>
+          <td>Negative number of remaining time steps multiplied by the number of drones</td>
+        </tr>
+      </table>
+
 
       <p>Table 1 shows the potential rewards for different states of the environment. The reward received per time step
       by the Blue team is reduced by one for each failed data transfer attempt. Thus, the maximum reward the Blue team
