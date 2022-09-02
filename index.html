@@ -216,6 +216,7 @@ layout: default
       the environment. A True done signal is returned when the maximum number of time steps is reached. This
       represents the completion of the border patrol mission. </p>
 
+    <section>
       <h2>How to use CybORG</h2>
 
       We use the Cyber Operations Research Gym (CybORG) to simulate the cyber environment for CAGE Challenge 3.</p>
@@ -308,7 +309,7 @@ layout: default
 
           <h2>Future challenges </h2>
           <p>The CAGE team will continue to develop this platform and plan to announce a new challenge problem after the close of this challenge. </p>
-
+        </section>
           <section id="downloads">
             {% if site.show_downloads %}
             <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
@@ -316,9 +317,102 @@ layout: default
             {% endif %}
             <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on
               GitHub</a>
-          </section>
-      </div>8
+    </section>
+    <h2>Appendix A - Action Sets</h2>
+    <table>
+      <tr>
+        <th>Action Name</th>
+        <th>Team</th>
+        <th>Description of Action</th>
+        <th>Bandwidth Usage</th>
+        <th>Local/Remote</th>
+        <th>Chance of being flagged as malicious</th>
+        <th>Chance of Failure</th>
+        <th>Parameters</th>
+      </tr>
+      <tr>
+        <td><strong>ExploitDroneVulnerability</strong></td>
+        <td>Red</td>
+        <td>Establish a low privileged session on a drone</td>
+        <td>Low (10%)</td>
+        <td>Remote</td>
+        <td>Moderate (50%)</td>
+        <td>High (90%)</td>
+        <td>IP address</td>
+      </tr>
+      <tr>
+        <td><strong>SiezeControl</strong></td>
+        <td>Red</td>
+        <td>Replace an agent on the target drone with a Red agent</td>
+        <td>High (90%)</td>
+        <td>Local</td>
+        <td>High (90%)</td>
+        <td>Low (10%)</td>
+        <td>IP address</td>
+      </tr>
+      <tr>
+        <td><strong>FloodBandwidth</strong></td>
+        <td>Red</td>
+        <td>Send large amount of meaningless data to consume a large amount of bandwidth</td>
+        <td>High (90%)</td>
+        <td>Remote</td>
+        <td>High (90%)</td>
+        <td>None</td>
+        <td>IP address</td>
+      </tr>
+      <tr>
+        <td><strong>RetakeControl</strong></td>
+        <td>Blue</td>
+        <td>Remove all Red agents and sessions, and create a Blue agent on the drone</td>
+        <td>Moderate (50%)</td>
+        <td>Remote</td>
+        <td>Low (10%)</td>
+        <td>Low (10%)</td>
+        <td>IP address</td>
+      </tr>
+      <tr>
+        <td><strong>RemoveOtherSessions</strong></td>
+        <td>Blue</td>
+        <td>Removes all sessions with low privileges</td>
+        <td>None</td>
+        <td>Local></td>
+        <td>None</td>
+        <td>Moderate (25%)</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td><strong>BlockTraffic</strong></td>
+        <td>Red, Blue</td>
+        <td>Drop incoming traffic from the target IP address</td>
+        <td>None</td>
+        <td>Local</td>
+        <td>None</td>
+        <td>None</td>
+        <td>IP address</td>
+      </tr>
+      <tr>
+        <td><strong>AllowTraffic</strong></td>
+        <td>Red, Blue</td>
+        <td>Stop dropping packets from the target IP address</td>
+        <td>None</td>
+        <td>Local</td>
+        <td>None</td>
+        <td>None</td>
+        <td>IP address</td>
+      </tr>
+      <tr>
+        <td><strong>SendData</strong></td>
+        <td>Green</td>
+        <td>Send a variable amount of data to another drone</td>
+        <td>Variable (10-90%)</td>
+        <td>Remote</td>
+        <td>Low (5%)</td>
+        <td>None</td>
+        <td>IP address</td>
+      </tr>
+    </table>
 
+  </div>
         <!-- APPENDICES -->
   </header>
   </section>
