@@ -159,7 +159,7 @@ layout: default
       the data path is able to intercept or alter the data. The reward for the Blue team is shared across all agents
       and is based on the Confidentiality, Integrity, and Availability of the transfer of data between drones.</p>
 
-        <!-- INSERT TABLE 1 HERE -->
+        <!-- TABLE 1 -->
       <p><strong>Table 1:</strong> A summary of the rewards received by the Blue Team in different states</p>
       <table>
         <tr>
@@ -269,6 +269,44 @@ layout: default
             <!-- </fieldset> -->
           </form>
 
+          <p>We also invite teams to submit full papers on their work on this CAGE challenge or using the CybORG environment to IJCAI, AAAI, ICML or any other venue of their choice. Please cite the challenge announcement as follows to reference the challenge: </p>
+          <code>
+            <p>@misc{cage_challenge_3_announcement,</p>
+            <p class="tab">author = {TTCP CAGE Working Group},</p>
+            <p class="tab">Title = {TTCP CAGE Challenge 3},</p>
+            <p class="tab">Publisher = {Github},</p>
+            <p class="tab">Howpublished = {\url{https://github.com/cage-challenge/cage-challenge-3}},</p>
+            <p class="tab">Year = {2022}</p>
+            <p>}</p>
+          </code>
+          
+          <p>In addition, authors may reference the following paper that describes CybORG</p>
+          <code>
+            <p>@PROCEEDINGS{cyborg_acd_2021,</p>
+            <p class="tab">author = {Maxwell Standen, Martin Lucas, David Bowman, Toby J\. Richer, Junae Kim and Damian Marriott},</p>
+            <p class="tab">Title = {CybORG: A Gym for the Development of Autonomous Cyber Agents},</p>
+            <p class="tab">booktitle = {IJCAI-21 1st International Workshop on Adaptive Cyber Defense.},</p>
+            <p class="tab">Publisher = {arXiv},</p>
+            <p class="tab">Year = {2021}</p>
+            <p>}</p>
+          </code>
+
+          <h2>Evaluation</h2>
+          <p>A leader board for submissions will be maintained until the final results are announced after the close of the challenge via the GitHub site.</p>
+          <p>The evaluation.py file is designed to provide a standardised evaluation for comparison. Each evaluation episode will run for 100 steps and will use the RedDroneWorm agent. </p>
+          <p>CybORG is run for 100 episodes and the total reward received by the Blue team is recorded for each episode. The mean and standard deviation for each set of episodes are recorded in the evaluation file. </p>
+          <p>The validation process involves summing the average scores of 1000 episodes.  Those results will be published in the final leader board. </p>
+
+          <h2>Important Dates</h2>
+          <ul>
+            <li>September 2022: Challenge 3 announced, released and open for submissions. </li>
+            <li>31 January 2023 (any time zone): Final day for challenge submissions. </li>
+            <li>14 February 2023: Final results announced.</li>
+          </ul>
+
+          <h2>Future challenges </h2>
+          <p>The CAGE team will continue to develop this platform and plan to announce a new challenge problem after the close of this challenge. </p>
+
           <section id="downloads">
             {% if site.show_downloads %}
             <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
@@ -277,9 +315,9 @@ layout: default
             <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on
               GitHub</a>
           </section>
-      </div>
+      </div>8
 
-      <!-- ADD REFERENCES AND CODE SNIPPETS HERE -->
+        <!-- APPENDICES -->
   </header>
   </section>
   </div>
