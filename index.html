@@ -246,35 +246,33 @@ layout: default
       Submit Your Organization/Group name, contact email, and a .zip file including your code and whitepaper
       submission below.
 
-      <!-- <div class="container"> -->
-        <section id="main_content">
-          <form action="https://formspree.io/f/xoqbvlda" method="POST" enctype="multipart/form-data">
-            <!-- <fieldset id="fs-frm-inputs"> -->
-            <label>
-              Group Name:
-              <input type="name" name="name">
-              <br></label>
-            <label>
-              Your email:
-              <input type="email" name="email">
-              </br></label>
-            <label>
-              Code .zip:
-              <input type="file" name="upload">
-              </br></label>
-            <label>
-              Whitepaper:
-              <input type="file" name="upload">
-              </br></label>
-            <!-- <label>
-                Message
-                <textarea 
-                  rows="5" name="message" id="message" required="True">
-                </textarea>
-              </label> -->
-            <button type="submit">Submit</button>
-            <!-- </fieldset> -->
-          </form>
+      <form action="https://formspree.io/f/xoqbvlda" method="POST" enctype="multipart/form-data">
+        <!-- <fieldset id="fs-frm-inputs"> -->
+        <label>
+          Group Name:
+          <input type="name" name="name">
+          <br></label>
+        <label>
+          Your email:
+          <input type="email" name="email">
+          </br></label>
+        <label>
+          Code .zip:
+          <input type="file" name="upload">
+          </br></label>
+        <label>
+          Whitepaper:
+          <input type="file" name="upload">
+          </br></label>
+        <!-- <label>
+            Message
+            <textarea 
+              rows="5" name="message" id="message" required="True">
+            </textarea>
+          </label> -->
+        <button type="submit">Submit</button>
+        <!-- </fieldset> -->
+      </form>
 
     <p>We also invite teams to submit full papers on their work on this CAGE challenge or using the CybORG environment to IJCAI, AAAI, ICML or any other venue of their choice. Please cite the challenge announcement as follows to reference the challenge: </p>
 
@@ -323,8 +321,7 @@ layout: default
         {% endif %}
         <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on
           GitHub</a>
-</section>
-</div>  
+    
   
     <!-- maybe add image of table if lines cant work -->
     <h2>Appendix A - Action Sets</h2>
