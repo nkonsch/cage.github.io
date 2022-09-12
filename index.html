@@ -328,6 +328,7 @@ layout: default
   <div class="container">
     <!-- maybe add image of table if lines cant work -->
     <h2>Appendix A - Action Sets</h2>
+    The action space of the agents in CAGE Challenge 3. The team column indicates which agents are able to perform that action.  
     <table>
       <tr>
         <th>Action Name</th>
@@ -420,6 +421,10 @@ layout: default
         <td>IP address</td>
       </tr>
     </table>
+  
+    <h2>Appendix B – Agent observation </h2>
+    
+    The PettingZoo wrapper performs utility functions that support Multi-Agent Reinforcement Learning (MARL) algorithms by conforming to the PettingZoo environment. This wrapper alters the observation to enable the use of Deep Reinforcement Learning techniques. This appendix describes the altered observation. Here we detail the observation of a single agent that may belong to the Red team or Blue team. The length of this observation changes based on the number of drones in the environment. “...” indicates that the previous boxes are repeated a number of times with the following boxes indicating which of the previous boxes were repeated. The blocked IP address and the number of malicious network event entries are repeated for the number of drones in the scenario. The x position entry, the y position entry, and the created session entry are repeated for all drones. The table below indicates what data is presented at each index of the observation of an agent. We use the symbol n to denote the number of drones in the scenario. All ranges are inclusive, so 1, …, n includes both 1 and n. 
 
   </div>
     
