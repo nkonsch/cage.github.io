@@ -274,165 +274,165 @@ layout: default
         <!-- </fieldset> -->
       </form>
 
-    <p>We also invite teams to submit full papers on their work on this CAGE challenge or using the CybORG environment to IJCAI, AAAI, ICML or any other venue of their choice. Please cite the challenge announcement as follows to reference the challenge: </p>
+      <p>We also invite teams to submit full papers on their work on this CAGE challenge or using the CybORG environment to IJCAI, AAAI, ICML or any other venue of their choice. Please cite the challenge announcement as follows to reference the challenge: </p>
 
-    <p>
-    @misc{cage_challenge_3_announcement,
-      <p style="margin-left:10%;">author = {TTCP CAGE Working Group},</p>
-      Title = {TTCP CAGE Challenge 3},
-      Publisher = {Github},
-      Howpublished = {\url{https://github.com/cage-challenge/cage-challenge-3}},
-      Year = {2022}
-    }
-    </p>
-    
-    
-    <p>In addition, authors may reference the following paper that describes CybORG</p>
+      <p>
+      @misc{cage_challenge_3_announcement,
+        <p style="margin-left:10%;">author = {TTCP CAGE Working Group},</p>
+        Title = {TTCP CAGE Challenge 3},
+        Publisher = {Github},
+        Howpublished = {\url{https://github.com/cage-challenge/cage-challenge-3}},
+        Year = {2022}
+      }
+      </p>
+      
+      
+      <p>In addition, authors may reference the following paper that describes CybORG</p>
 
 
-      <p>@PROCEEDINGS{cyborg_acd_2021,</p>
-      <p class="tab">author = {Maxwell Standen, Martin Lucas, David Bowman, Toby J\. Richer, Junae Kim and Damian Marriott},</p>
-      <p class="tab">Title = {CybORG: A Gym for the Development of Autonomous Cyber Agents},</p>
-      <p class="tab">booktitle = {IJCAI-21 1st International Workshop on Adaptive Cyber Defense.},</p>
-      <p class="tab">Publisher = {arXiv},</p>
-      <p class="tab">Year = {2021}</p>
-      <p>}</p>
-        
-    <h2>Evaluation</h2>
-    <p>A leader board for submissions will be maintained until the final results are announced after the close of the challenge via the GitHub site.</p>
-    <p>The evaluation.py file is designed to provide a standardised evaluation for comparison. Each evaluation episode will run for 100 steps and will use the RedDroneWorm agent. </p>
-    <p>CybORG is run for 100 episodes and the total reward received by the Blue team is recorded for each episode. The mean and standard deviation for each set of episodes are recorded in the evaluation file. </p>
-    <p>The validation process involves summing the average scores of 1000 episodes.  Those results will be published in the final leader board. </p>
+        <p>@PROCEEDINGS{cyborg_acd_2021,</p>
+        <p class="tab">author = {Maxwell Standen, Martin Lucas, David Bowman, Toby J\. Richer, Junae Kim and Damian Marriott},</p>
+        <p class="tab">Title = {CybORG: A Gym for the Development of Autonomous Cyber Agents},</p>
+        <p class="tab">booktitle = {IJCAI-21 1st International Workshop on Adaptive Cyber Defense.},</p>
+        <p class="tab">Publisher = {arXiv},</p>
+        <p class="tab">Year = {2021}</p>
+        <p>}</p>
+          
+      <h2>Evaluation</h2>
+      <p>A leader board for submissions will be maintained until the final results are announced after the close of the challenge via the GitHub site.</p>
+      <p>The evaluation.py file is designed to provide a standardised evaluation for comparison. Each evaluation episode will run for 100 steps and will use the RedDroneWorm agent. </p>
+      <p>CybORG is run for 100 episodes and the total reward received by the Blue team is recorded for each episode. The mean and standard deviation for each set of episodes are recorded in the evaluation file. </p>
+      <p>The validation process involves summing the average scores of 1000 episodes.  Those results will be published in the final leader board. </p>
 
-    <h2>Important Dates</h2>
-    <ul>
-      <li>September 2022: Challenge 3 announced, released and open for submissions. </li>
-      <li>31 January 2023 (any time zone): Final day for challenge submissions. </li>
-      <li>14 February 2023: Final results announced.</li>
-    </ul>
+      <h2>Important Dates</h2>
+      <ul>
+        <li>September 2022: Challenge 3 announced, released and open for submissions. </li>
+        <li>31 January 2023 (any time zone): Final day for challenge submissions. </li>
+        <li>14 February 2023: Final results announced.</li>
+      </ul>
 
-    <h2>Future challenges </h2>
-    <p>The CAGE team will continue to develop this platform and plan to announce a new challenge problem after the close of this challenge. </p>
-      </div>
-      <section id="downloads">
-        {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download as .tar.gz</a>
-        {% endif %}
-        <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on
-          GitHub</a>
+      <h2>Future challenges </h2>
+      <p>The CAGE team will continue to develop this platform and plan to announce a new challenge problem after the close of this challenge. </p>
+        </div>
+        <section id="downloads">
+          {% if site.show_downloads %}
+          <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
+          <a href="{{ site.github.tar_url }}" class="btn">Download as .tar.gz</a>
+          {% endif %}
+          <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on
+            GitHub</a>
+      
     
-  
-    <!-- maybe add image of table if lines cant work -->
-    <h2>Appendix A - Action Sets</h2>
-    The action space of the agents in CAGE Challenge 3. The team column indicates which agents are able to perform that action.  
-    <table>
-      <tr>
-        <th>Action Name</th>
-        <th>Team</th>
-        <th>Description of Action</th>
-        <th>Bandwidth Usage</th>
-        <th>Local/Remote</th>
-        <th>Chance of being flagged as malicious</th>
-        <th>Chance of Failure</th>
-        <th>Parameters</th>
-      </tr>
-      <hr>
-      <tr>
-        <td><strong>ExploitDroneVulnerability</strong></td>
-        <td style="color:red;">Red</td>
-        <td>Establish a low privileged session on a drone</td>
-        <td>Low (10%)</td>
-        <td>Remote</td>
-        <td>Moderate (50%)</td>
-        <td>High (90%)</td>
-        <td>IP address</td>
-      </tr>
-      <hr>
-      <tr>
-        <td><strong>SiezeControl</strong></td>
-        <td style="color:red;">Red</td>
-        <td>Replace an agent on the target drone with a Red agent</td>
-        <td>High (90%)</td>
-        <td>Local</td>
-        <td>High (90%)</td>
-        <td>Low (10%)</td>
-        <td>IP address</td>
-      </tr>
-      <hr>
-      <tr>
-        <td><strong>FloodBandwidth</strong></td>
-        <td style="color:red;">Red</td>
-        <td>Send large amount of meaningless data to consume a large amount of bandwidth</td>
-        <td>High (90%)</td>
-        <td>Remote</td>
-        <td>High (90%)</td>
-        <td>None</td>
-        <td>IP address</td>
-      </tr>
-      <hr>
-      <tr>
-        <td><strong>RetakeControl</strong></td>
-        <td style="color:blue;">Blue</td>
-        <td>Remove all Red agents and sessions, and create a Blue agent on the drone</td>
-        <td>Moderate (50%)</td>
-        <td>Remote</td>
-        <td>Low (10%)</td>
-        <td>Low (10%)</td>
-        <td>IP address</td>
-      </tr>
-      <tr>
-        <td><strong>RemoveOtherSessions</strong></td>
-        <td style="color:blue;">Blue</td>
-        <td>Removes all sessions with low privileges</td>
-        <td>None</td>
-        <td>Local></td>
-        <td>None</td>
-        <td>Moderate (25%)</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td><strong>BlockTraffic</strong></td>
-        <td style="color:purple;">Red, Blue</td>
-        <td>Drop incoming traffic from the target IP address</td>
-        <td>None</td>
-        <td>Local</td>
-        <td>None</td>
-        <td>None</td>
-        <td>IP address</td>
-      </tr>
-      <tr>
-        <td><strong>AllowTraffic</strong></td>
-        <td style="color:purple;">Red, Blue</td>
-        <td>Stop dropping packets from the target IP address</td>
-        <td>None</td>
-        <td>Local</td>
-        <td>None</td>
-        <td>None</td>
-        <td>IP address</td>
-      </tr>
-      <tr>
-        <td><strong>SendData</strong></td>
-        <td style="color:green;">Green</td>
-        <td>Send a variable amount of data to another drone</td>
-        <td>Variable (10-90%)</td>
-        <td>Remote</td>
-        <td>Low (5%)</td>
-        <td>None</td>
-        <td>IP address</td>
-      </tr>
-    </table>
-  
-    <h2>Appendix B - Agent observation </h2>
+      <!-- maybe add image of table if lines cant work -->
+      <h2>Appendix A - Action Sets</h2>
+      The action space of the agents in CAGE Challenge 3. The team column indicates which agents are able to perform that action.  
+      <table>
+        <tr>
+          <th>Action Name</th>
+          <th>Team</th>
+          <th>Description of Action</th>
+          <th>Bandwidth Usage</th>
+          <th>Local/Remote</th>
+          <th>Chance of being flagged as malicious</th>
+          <th>Chance of Failure</th>
+          <th>Parameters</th>
+        </tr>
+        <hr>
+        <tr>
+          <td><strong>ExploitDroneVulnerability</strong></td>
+          <td style="color:red;">Red</td>
+          <td>Establish a low privileged session on a drone</td>
+          <td>Low (10%)</td>
+          <td>Remote</td>
+          <td>Moderate (50%)</td>
+          <td>High (90%)</td>
+          <td>IP address</td>
+        </tr>
+        <hr>
+        <tr>
+          <td><strong>SiezeControl</strong></td>
+          <td style="color:red;">Red</td>
+          <td>Replace an agent on the target drone with a Red agent</td>
+          <td>High (90%)</td>
+          <td>Local</td>
+          <td>High (90%)</td>
+          <td>Low (10%)</td>
+          <td>IP address</td>
+        </tr>
+        <hr>
+        <tr>
+          <td><strong>FloodBandwidth</strong></td>
+          <td style="color:red;">Red</td>
+          <td>Send large amount of meaningless data to consume a large amount of bandwidth</td>
+          <td>High (90%)</td>
+          <td>Remote</td>
+          <td>High (90%)</td>
+          <td>None</td>
+          <td>IP address</td>
+        </tr>
+        <hr>
+        <tr>
+          <td><strong>RetakeControl</strong></td>
+          <td style="color:blue;">Blue</td>
+          <td>Remove all Red agents and sessions, and create a Blue agent on the drone</td>
+          <td>Moderate (50%)</td>
+          <td>Remote</td>
+          <td>Low (10%)</td>
+          <td>Low (10%)</td>
+          <td>IP address</td>
+        </tr>
+        <tr>
+          <td><strong>RemoveOtherSessions</strong></td>
+          <td style="color:blue;">Blue</td>
+          <td>Removes all sessions with low privileges</td>
+          <td>None</td>
+          <td>Local></td>
+          <td>None</td>
+          <td>Moderate (25%)</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td><strong>BlockTraffic</strong></td>
+          <td style="color:purple;">Red, Blue</td>
+          <td>Drop incoming traffic from the target IP address</td>
+          <td>None</td>
+          <td>Local</td>
+          <td>None</td>
+          <td>None</td>
+          <td>IP address</td>
+        </tr>
+        <tr>
+          <td><strong>AllowTraffic</strong></td>
+          <td style="color:purple;">Red, Blue</td>
+          <td>Stop dropping packets from the target IP address</td>
+          <td>None</td>
+          <td>Local</td>
+          <td>None</td>
+          <td>None</td>
+          <td>IP address</td>
+        </tr>
+        <tr>
+          <td><strong>SendData</strong></td>
+          <td style="color:green;">Green</td>
+          <td>Send a variable amount of data to another drone</td>
+          <td>Variable (10-90%)</td>
+          <td>Remote</td>
+          <td>Low (5%)</td>
+          <td>None</td>
+          <td>IP address</td>
+        </tr>
+      </table>
     
-    The PettingZoo wrapper performs utility functions that support Multi-Agent Reinforcement Learning (MARL) algorithms by conforming to the PettingZoo environment. This wrapper alters the observation to enable the use of Deep Reinforcement Learning techniques. This appendix describes the altered observation. Here we detail the observation of a single agent that may belong to the Red team or Blue team. The length of this observation changes based on the number of drones in the environment. “...” indicates that the previous boxes are repeated a number of times with the following boxes indicating which of the previous boxes were repeated. The blocked IP address and the number of malicious network event entries are repeated for the number of drones in the scenario. The x position entry, the y position entry, and the created session entry are repeated for all drones. The table below indicates what data is presented at each index of the observation of an agent. We use the symbol n to denote the number of drones in the scenario. All ranges are inclusive, so 1, …, n includes both 1 and n. 
+      <h2>Appendix B - Agent observation </h2>
+      
+      The PettingZoo wrapper performs utility functions that support Multi-Agent Reinforcement Learning (MARL) algorithms by conforming to the PettingZoo environment. This wrapper alters the observation to enable the use of Deep Reinforcement Learning techniques. This appendix describes the altered observation. Here we detail the observation of a single agent that may belong to the Red team or Blue team. The length of this observation changes based on the number of drones in the environment. “...” indicates that the previous boxes are repeated a number of times with the following boxes indicating which of the previous boxes were repeated. The blocked IP address and the number of malicious network event entries are repeated for the number of drones in the scenario. The x position entry, the y position entry, and the created session entry are repeated for all drones. The table below indicates what data is presented at each index of the observation of an agent. We use the symbol n to denote the number of drones in the scenario. All ranges are inclusive, so 1, …, n includes both 1 and n. 
 
-  
     
-          <!-- APPENDICES -->
-    
-  </header>
-  </section>
+      
+            <!-- APPENDICES -->
+      
+    </header>
+    </section>
   </div>
 </body>
 
