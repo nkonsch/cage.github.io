@@ -61,7 +61,7 @@ layout: default
       or reclaimed, and (b) the flow of data between the soldiers using the network is maintained.”</p>
     
       <!-- INSERT IMAGE 1 HERE -->
-      <img src="guilderflorinmap.png" alt="GuilderFlorinMap" width="900" height="500">
+      <img src="guilderflorinmap.png" alt="GuilderFlorinMap" width="900" height="400">
 
 
       <hr>
@@ -447,8 +447,38 @@ layout: default
       of an agent. We use the symbol n to denote the number of drones in the scenario. All ranges are inclusive, so 1, …, n includes both 1 and n. 
 
     <!-- insert last table here, try to figure out table dividing lines bc its gonna look messy  -->
-      
-      
+      <table>
+        <tr>
+          <th>Index</th>
+          <th>Description</th>  
+          <th>Values</th>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>Indicates if the previos action was identified as successful.</td>
+          <td>True: 0, False: 1, Unknown: 2 </td>
+        </tr>
+        <tr>
+          <td>1, ..., n</td>
+          <td>The value at index i+1 indicates if the IP address of drone i has been blocked by the host drone, for i in [0, n-1].</td>
+          <td>Unblocked: 0, Blocked: 1</td>
+        </tr>
+        <tr>
+          <td>n+1</td>
+          <td>Malicious process detected on the host drone.</td>
+          <td>No flagged malicious processes: 0, A flagged malicious process: 1.</td>
+        </tr>
+        <tr>
+          <td>n+2, ..., 2n+1</td>
+          <td>The value at index i + (n + 2) indicates the number of malicious network events from drone i that were flagged by the host drone, for i in [0, n-1]. </td>
+          <td>No flagged malicious network events: 0, 1 flagged malicious network event: 1, 2 flagged malicious network events: 2 </td>
+        </tr>
+        <tr>
+          <td>2n + 2, …, 5n +1 </td>
+          <td>The value at index 3  i + (2n + 4) indicates the x position of drone i, the value at index 3  i + (2n + 5) indicates the y position of drone i, and the value at 3  i + (2n + 6) indicates if a new session was created on drone i, for i in [0, n-1].  </td>
+          <td>0 <= x <= 100 at 3i + 2n + 4, 0 <= y <= 100 at 3i + 2n + 5, </td> No new session: 0, or a new session: 1 at 3i + 2n + 6 </td>
+        </tr>
+      </table>
       
     </header>
     </section>
