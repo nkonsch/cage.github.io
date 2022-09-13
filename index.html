@@ -279,10 +279,10 @@ layout: default
       <p>
       @misc{cage_challenge_3_announcement,
         <p style="margin-left:10%;">author = {TTCP CAGE Working Group},</p>
-        Title = {TTCP CAGE Challenge 3},
-        Publisher = {Github},
-        Howpublished = {\url{https://github.com/cage-challenge/cage-challenge-3}},
-        Year = {2022}
+        <p style="margin-left:10%;">Title = {TTCP CAGE Challenge 3},</p>
+        <p style="margin-left:10%;">Publisher = {Github},</p>
+        <p style="margin-left:10%;">Howpublished = {\url{https://github.com/cage-challenge/cage-challenge-3}},</p>
+        <p style="margin-left:10%;">Year = {2022}</p>
       }
       </p>
       
@@ -290,13 +290,15 @@ layout: default
       <p>In addition, authors may reference the following paper that describes CybORG</p>
 
 
-        <p>@PROCEEDINGS{cyborg_acd_2021,</p>
-        <p class="tab">author = {Maxwell Standen, Martin Lucas, David Bowman, Toby J\. Richer, Junae Kim and Damian Marriott},</p>
-        <p class="tab">Title = {CybORG: A Gym for the Development of Autonomous Cyber Agents},</p>
-        <p class="tab">booktitle = {IJCAI-21 1st International Workshop on Adaptive Cyber Defense.},</p>
-        <p class="tab">Publisher = {arXiv},</p>
-        <p class="tab">Year = {2021}</p>
-        <p>}</p>
+      <p>
+      @PROCEEDINGS{cyborg_acd_2021,</p>
+        <p style="margin-left:10%;">author = {Maxwell Standen, Martin Lucas, David Bowman, Toby J\. Richer, Junae Kim and Damian Marriott},</p>
+        <p style="margin-left:10%;">Title = {CybORG: A Gym for the Development of Autonomous Cyber Agents},</p>
+        <p style="margin-left:10%;">booktitle = {IJCAI-21 1st International Workshop on Adaptive Cyber Defense.},</p>
+        <p style="margin-left:10%;">Publisher = {arXiv},</p>
+        <p style="margin-left:10%;">Year = {2021}</p>
+      }
+      </p>
           
       <h2>Evaluation</h2>
       <p>A leader board for submissions will be maintained until the final results are announced after the close of the challenge via the GitHub site.</p>
@@ -337,7 +339,6 @@ layout: default
           <th>Chance of Failure</th>
           <th>Parameters</th>
         </tr>
-        <hr>
         <tr>
           <td><strong>ExploitDroneVulnerability</strong></td>
           <td style="color:red;">Red</td>
@@ -348,7 +349,6 @@ layout: default
           <td>High (90%)</td>
           <td>IP address</td>
         </tr>
-        <hr>
         <tr>
           <td><strong>SiezeControl</strong></td>
           <td style="color:red;">Red</td>
@@ -359,7 +359,6 @@ layout: default
           <td>Low (10%)</td>
           <td>IP address</td>
         </tr>
-        <hr>
         <tr>
           <td><strong>FloodBandwidth</strong></td>
           <td style="color:red;">Red</td>
@@ -370,7 +369,6 @@ layout: default
           <td>None</td>
           <td>IP address</td>
         </tr>
-        <hr>
         <tr>
           <td><strong>RetakeControl</strong></td>
           <td style="color:blue;">Blue</td>
@@ -425,7 +423,14 @@ layout: default
     
       <h2>Appendix B - Agent observation </h2>
       
-      The PettingZoo wrapper performs utility functions that support Multi-Agent Reinforcement Learning (MARL) algorithms by conforming to the PettingZoo environment. This wrapper alters the observation to enable the use of Deep Reinforcement Learning techniques. This appendix describes the altered observation. Here we detail the observation of a single agent that may belong to the Red team or Blue team. The length of this observation changes based on the number of drones in the environment. “...” indicates that the previous boxes are repeated a number of times with the following boxes indicating which of the previous boxes were repeated. The blocked IP address and the number of malicious network event entries are repeated for the number of drones in the scenario. The x position entry, the y position entry, and the created session entry are repeated for all drones. The table below indicates what data is presented at each index of the observation of an agent. We use the symbol n to denote the number of drones in the scenario. All ranges are inclusive, so 1, …, n includes both 1 and n. 
+      The PettingZoo wrapper performs utility functions that support Multi-Agent Reinforcement Learning (MARL) algorithms by conforming to the 
+      PettingZoo environment. This wrapper alters the observation to enable the use of Deep Reinforcement Learning techniques. This appendix 
+      describes the altered observation. Here we detail the observation of a single agent that may belong to the Red team or Blue team. 
+      The length of this observation changes based on the number of drones in the environment. “...” indicates that the previous boxes are 
+      repeated a number of times with the following boxes indicating which of the previous boxes were repeated. The blocked IP address and the 
+      number of malicious network event entries are repeated for the number of drones in the scenario. The x position entry, the y position entry, 
+      and the created session entry are repeated for all drones. The table below indicates what data is presented at each index of the observation 
+      of an agent. We use the symbol n to denote the number of drones in the scenario. All ranges are inclusive, so 1, …, n includes both 1 and n. 
 
     
       
