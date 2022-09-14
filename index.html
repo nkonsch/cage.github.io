@@ -138,7 +138,7 @@ layout: default
       to learn a protocol. </p>
    
         <!-- PRIV ESCALATION IMAGE HERE -->
-        <img src="privesc.png" alt="Privilege Escalation Flow" width="600" height="600">
+        <img src="privesc.png" alt="Privilege Escalation Flow" width="900" height="900">
 
       <p>Figure 2 shows the state transitions caused on a single drone by actions taken by agents on the Blue or Red
       team. Red agents that perform a successful exploit action against a drone will get low privileged code execution
@@ -470,13 +470,18 @@ layout: default
         </tr>
         <tr>
           <td>n+2, ..., 2n+1</td>
-          <td>The value at index i + (n + 2) indicates the number of malicious network events from drone i that were flagged by the host drone, for i in [0, n-1]. </td>
+          <td>The value at index i+(n+2) indicates the number of malicious network events from drone i that were flagged by the host drone, for i in [0, n-1]. </td>
           <td>No flagged malicious network events: 0, 1 flagged malicious network event: 1, 2 flagged malicious network events: 2 </td>
         </tr>
         <tr>
-          <td>2n + 2, …, 5n +1 </td>
-          <td>The value at index 3  i + (2n + 4) indicates the x position of drone i, the value at index 3  i + (2n + 5) indicates the y position of drone i, and the value at 3  i + (2n + 6) indicates if a new session was created on drone i, for i in [0, n-1].  </td>
-          <td>0 &#60;= x &#60;= 100 at 3i + 2n + 4, 0 &#60;= y &#60;= 100 at 3i + 2n + 5, </td> No new session: 0, or a new session: 1 at 3i + 2n + 6 </td>
+          <td>2n+2, …, 5n+1 </td>
+          <td>The value at index 3i+(2n+4) indicates the x position of drone i, the value at index 3i+(2n+5) indicates the y position of drone i, and the value at 3i+(2n+6) indicates if a new session was created on drone i, for i in [0, n-1].  </td>
+          <td>0 &#60;= x &#60;= 100 at 3i+2n+4, 0 &#60;= y &#60;= 100 at 3i+2n+5, </td> No new session: 0, or a new session: 1 at 3i+2n+6 </td>
+        </tr>
+        <tr>
+          <td>5n+2</td>
+          <td>Index of the host drone. </td>
+          <td>0 &#60;= i &#60; n </td>
         </tr>
       </table>
       
