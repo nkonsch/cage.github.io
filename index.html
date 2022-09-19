@@ -244,13 +244,25 @@ layout: default
     -->
       <!-- <p>View past Challenges and Leaderboard scores <a
           href="https://github.com/cage-challenge/cage-challenge-2">here.</a></p> -->
-        <form method="POST" action="https://formsubmit.co/nkonsch@gmail.com" enctype="multipart/form-data">
-          <input type="email" name="email" placeholder="Your email">
-          <textarea name="message" placeholder="Details of your file"></textarea>
-          <input type="file" name="attachment" accept="image/png, image/jpeg">
-          <input type="file" name="attachment" accept="file/txt, file/zip">
-          <button type="submit">Send Test</button>
-        </form>
+          <div class="container">
+            <h1>FormSubmit Demo</h1>
+            <form target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                  </div>
+                  <div class="col">
+                    <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+            </form>
+          </div>
 
           <!--
       Submit Your Organization/Group name, contact email, and a .zip file including your code and whitepaper
